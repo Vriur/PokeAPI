@@ -11,8 +11,9 @@ export default {
       colors: {
         'palette-primary': '#224F75',
         'palette-secondary': '#63949E',
-        'palette-white': '#C8D8E7',
+        'palette-white': '#d8dde3',
         'palette-black': '#03152D',
+        'palette-grey': '#cbcbcb',
 
         'normal': '#9fa19f',
 	      'fire': '#e62928',
