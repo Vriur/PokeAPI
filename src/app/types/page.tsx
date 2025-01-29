@@ -19,7 +19,7 @@ export default async function Types() {
                 {
                     types.results.map((type: Type) => {
                         return (
-                            <Link key={type.name} href={`/types/${type.name}`} className={`justify-center content-center text-center lg:p-8 border-4 rounded-lg transition delay-200 duration-300 ease-in-out text-palette-black border-${type.name} bg-${type.name} hover:bg-opacity-50`}>
+                            <Link key={type.name} href={`/types/${type.name}?page=1`} className={`justify-center content-center text-center lg:p-8 border-4 rounded-lg transition delay-200 duration-300 ease-in-out text-palette-black border-${type.name} bg-${type.name} hover:bg-opacity-50`}>
                                 <label className='italic font-sans font-semibold text-xl text-center capitalize'>{type.name}</label>   
                             </Link>
                         )
