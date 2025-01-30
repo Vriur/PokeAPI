@@ -32,16 +32,16 @@ export default function Pagination (
         <div className='flex flex-row-reverse gap-4 pr-10 pb-10'>
             {
                 pageNumber < totalPageNumber &&
-                <div className={`justify-center content-center text-center p-8 rounded-lg transition delay-200 duration-300 ease-in-out text-palette-black bg-${typeName} hover:bg-opacity-50`}>
-                    <button onClick={() => handleClick(nextPage)} className='italic font-sans font-semibold md:text-xl text-sm text-center'>
+                <div className={`justify-center content-center text-center rounded-lg transition delay-200 duration-300 ease-in-out text-palette-black bg-${typeName} hover:bg-opacity-50`}>
+                    <button onClick={() => handleClick(nextPage)} className='lg:p-10 md:p-8 sm:p-4 p-4 lg:text-xl sm:text-md max-sm:text-xs italic font-sans font-semibold md:text-xl text-sm text-center'>
                         {`Next Page (${nextPage})`}
                     </button>
                 </div>
             }
             {
                 pageNumber > 1 &&
-                <div className={`justify-center content-center text-center p-8 rounded-lg transition delay-200 duration-300 ease-in-out text-palette-black bg-${typeName} hover:bg-opacity-50`}>
-                    <button onClick={() => handleClick(previousPage)} className='italic font-sans font-semibold md:text-xl text-sm text-center'>
+                <div className={`justify-center content-center text-center rounded-lg transition delay-200 duration-300 ease-in-out text-palette-black bg-${typeName} hover:bg-opacity-50`}>
+                    <button onClick={() => handleClick(previousPage)} className='lg:p-10 md:p-8 sm:p-4 p-4 lg:text-xl sm:text-md max-sm:text-xs  italic font-sans font-semibold md:text-xl text-sm text-center'>
                         {`Previous Page (${previousPage})`}
                     </button>
                 </div>

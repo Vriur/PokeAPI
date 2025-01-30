@@ -91,9 +91,13 @@ export default function Grid (
                 {
                     pokemonInfo.map((pokemon: PokemonEntry) => {
                         return (
-                            <div key={pokemon.name} onClick={() => { handlePokemonModalInfo(pokemon.name); handleClick() }} className={`group justify-center content-center text-center p-8 border-4 rounded-lg transition delay-200 duration-300 ease-in-out text-${typeName} border-${typeName} bg-${typeName} hover:bg-opacity-50`}>
-                                <img src={pokemon.image} className="justify-center content-center"></img>
-                                <label className='group-hover:text-palette-black italic font-sans font-semibold md:text-xl text-sm text-center capitalize'>{pokemon.name}</label>
+                            <div key={pokemon.name} onClick={() => { handlePokemonModalInfo(pokemon.name); handleClick() }} className={`group justify-center content-center text-center border-4 rounded-lg transition delay-200 duration-300 ease-in-out text-${typeName} border-${typeName} bg-${typeName} hover:bg-opacity-50`}>
+                                <div className="flex items-center justify-center content-center text-center">
+                                    <img src={pokemon.image} className='2lg:lg:md:h-32 2lg:lg:md:w-32'></img>
+                                </div>
+                                <div className="justify-center content-center text-center">
+                                    <label className='group-hover:text-palette-black italic font-sans font-semibold lg:text-xl md:text-lg sm:text-md max-sm:text-xs text-xs text-center capitalize'>{pokemon.name}</label>
+                                </div>
                             </div>
                         )
                     })

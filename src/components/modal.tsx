@@ -20,11 +20,11 @@ export default function Modal({ pokemonEntry, openModal, typeName, handleClick }
                       close the modal when is clicked using the handleClick function that was passed by the 
                       parent (grid component). 
                     */}
-                    <div className={`bg-${typeName} px-4 pt-5 pb-4 sm:p-6 sm:pb-4`}>
+                    <div className={`flex items-center justify-center content-center text-center bg-${typeName} px-4 pt-5 pb-4 sm:p-6 sm:pb-4`}>
                         <div className="sm:flex sm:items-start">
-                            <div className="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
+                            <div className="flex flex-col items-center justify-center content-center mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
                                 <h3 className="text-base text-palette-black italic font-sans font-semibold capitalize" id="modal-title">{pokemonEntry?.name}</h3>
-                                <img src={pokemonEntry?.image} className="justify-center content-center"></img>
+                                <img src={pokemonEntry?.image} className="2lg:h-40 2lg:w-40 lg:h-40 lg:w-40 md:h-24 md:w-24 justify-center content-center"></img>
                                 <div className="mt-2">
                                   <label className="text-sm text-palette-black italic font-sans font-semibold capitalize">{`Move #1: ${pokemonEntry?.firstMove}`}</label>
                                 </div>
