@@ -8,16 +8,26 @@ const typeBgColours = ['bg-normal', 'bg-fire', 'bg-water', 'bg-electric', 'bg-gr
 export default function Pagination ( 
     { pageNumber, totalPageNumber, typeName }: { pageNumber: number, totalPageNumber: number, typeName: string } 
 ){
+    /*
+        The useRouter is a hook used for replace the current route with the route of the previous or next page, while 
+        usePathname is a hook used for get the the current pathname need it for constructed the URL parameter of useRouter. 
+    */
     const router = useRouter();
     const pathname = usePathname();
 
+    // Variables that represent the previous and next page number.
     const previousPage: number = pageNumber - 1;
     const nextPage: number = pageNumber + 1;
 
+    // When previous button or next button this handler will replace the URL according the clicked button.
     const handleClick = (newPage: number) => {
         router.replace(`${pathname}?page=${newPage}`);
     }
 
+    /*
+        It will return a flex row reverse with the previous button and the next button on it. Those buttons will trigger
+        the handleClick with the number of the previous or next page respectively.
+    */
     return (
         <div className='flex flex-row-reverse gap-4 pr-10 pb-10'>
             {

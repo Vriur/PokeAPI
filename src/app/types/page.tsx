@@ -1,18 +1,17 @@
 import Link from 'next/link';
 
+// Interface used for manage the data fetch corresponding to every pokemon type.
 interface Type {
     name: string;
     url: string;
 }
 
-/* This arrays are need it because Tailwind dump every class that wasn't hardcoded on the code. */
-const typeBorderColours = ['border-normal', 'border-fire', 'border-water', 'border-electric', 'border-grass', 'border-ice', 'border-fighting', 'border-poison', 'border-ground', 'border-flying', 'border-psychic', 'border-bug', 'border-rock', 'border-ghost', 'border-dragon', 'border-dark', 'border-steel', 'border-fairy', 'border-stellar', 'border-unknown'];
-const typeBgColours = ['bg-normal', 'bg-fire', 'bg-water', 'bg-electric', 'bg-grass', 'bg-ice', 'bg-fighting', 'bg-poison', 'bg-ground', 'bg-flying', 'bg-psychic', 'bg-bug', 'bg-rock', 'bg-ghost', 'bg-dragon', 'bg-dark', 'bg-steel', 'bg-fairy', 'bg-stellar', 'bg-unknown'];
-
 export default async function Types() {
+    // Get the pokemon types data.
     const data = await fetch("https://pokeapi.co/api/v2/type")
     const types = await data.json();
 
+    // Return a grid of clickable links of pokemon types. When some link is clicked it'll redirect to /types/: type page. 
     return (
         <div className='flex justify-center content-center h-screen w-screen'>
             <div className='grid grid-cols-3 md:grid-cols-5 gap-4 p-4 lg:p-10'>
