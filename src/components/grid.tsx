@@ -34,7 +34,7 @@ export default function Grid (
             const jsonPokemonData = await fetch(pokemon.pokemon.url).then((response) => response.json());
 
             // Pick the first move by a random choice.
-            let firstMove: string = jsonPokemonData.moves[Math.floor(Math.random() * jsonPokemonData.moves.length)].move.name;
+            const firstMove: string = jsonPokemonData.moves[Math.floor(Math.random() * jsonPokemonData.moves.length)].move.name;
             let secondMove: string = "";
 
             // Pick the second move by a random choice until it is different from the first move.
@@ -66,7 +66,7 @@ export default function Grid (
     // Funtion that handle the update of the pokemon info that will be shown of the modal.
     const handlePokemonModalInfo = (searchName: string) => {
         // Look for the information corresponding to the pokemon name that had triggered the handle function.
-        let modalPokemon: PokemonEntry | undefined = pokemonInfo.find(
+        const modalPokemon: PokemonEntry | undefined = pokemonInfo.find(
             (pokemon) => pokemon.name.localeCompare(searchName) == 0
         ); 
         

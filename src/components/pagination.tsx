@@ -2,9 +2,6 @@
 
 import { usePathname, useRouter } from 'next/navigation';
 
-/* This array is need it because Tailwind dump every class that wasn't hardcoded on the code. */
-const typeBgColours = ['bg-normal', 'bg-fire', 'bg-water', 'bg-electric', 'bg-grass', 'bg-ice', 'bg-fighting', 'bg-poison', 'bg-ground', 'bg-flying', 'bg-psychic', 'bg-bug', 'bg-rock', 'bg-ghost', 'bg-dragon', 'bg-dark', 'bg-steel', 'bg-fairy', 'bg-stellar', 'bg-unknown'];
-
 export default function Pagination ( 
     { pageNumber, totalPageNumber, typeName }: { pageNumber: number, totalPageNumber: number, typeName: string } 
 ){
